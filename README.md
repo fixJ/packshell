@@ -90,7 +90,7 @@ packer.exe win_sc_normal.exe win_sc_pack.exe
 
 - execute new file and msf get a session
 
-![image-20230607182557515](.\images\session-sc.png)
+![image-20230607182557515](./images/session-sc.png)
 
 ## anti-virus test
 
@@ -108,11 +108,11 @@ packer.exe win_sc_normal.exe win_sc_pack.exe
 
 - unpack file in virustotal
 
-![image-20230607182947156](.\images\unpack-sc.png)
+![image-20230607182947156](./images/unpack-sc.png)
 
 - packed file in virustotal
 
-![image-20230607183021362](.\images\packed-sc.png)
+![image-20230607183021362](./images/packed-sc.png)
 
 # TODO
 
