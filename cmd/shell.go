@@ -1,10 +1,12 @@
 package main
 
 import (
+	"context"
 	"encoding/binary"
 	"fmt"
 	"github.com/winlabs/gowin32"
 	"packshell/internal"
+	"time"
 	"unsafe"
 )
 
@@ -15,6 +17,8 @@ var (
 )
 
 func main() {
+	ctx, _ := context.WithTimeout(context.Background(), time.Duration(2)*time.Second)
+	<-ctx.Done()
 	// 1.get data from rsrc section
 	fmt.Printf("[*] Starting get source file from rsrc section\n")
 	pFileDataLen, err := internal.GetResource(0, rsrcFileDataLenID, gowin32.ResourceTypeRCData)
