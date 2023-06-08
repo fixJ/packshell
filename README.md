@@ -102,7 +102,7 @@ packer.exe win_sc_normal.exe win_sc_pack.exe
 
 - packed file in virustotal
 
-![packed](./images/packed-exe.png)
+![image-20230608122753702](./images/packed-exe2.png)
 
 ### msf shellcode
 
@@ -112,8 +112,8 @@ packer.exe win_sc_normal.exe win_sc_pack.exe
 
 - packed file in virustotal
 
-![image-20230607183021362](./images/packed-sc.png)
+![image-20230608122915029](./images/packed-sc2.png)
 
 # TODO
 
-- [ ] anti anti-virus
+- [x] anti anti-virus
